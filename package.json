@@ -1,0 +1,19 @@
+{
+  "name": "crud_homework",
+  "version": "1.0.0",
+  "description": "Create a CRUD application with Express and Mongoose that allows for the Create, Reading, Updating and Deleting of a simple model of your own creation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelbrewster/crud_homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelbrewster/crud_homework/issues"
+  },
+  "homepage": "https://github.com/joelbrewster/crud_homework#readme"
+}
