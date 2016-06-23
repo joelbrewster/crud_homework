@@ -14,9 +14,9 @@ mongoose.connect('mongodb://localhost/beer_library');
 
 //Create new beers
 var array = [
-  { name: 'melbourne beer', maker: 'melbourne brewery', year: 2016 },
-  { name: 'china beer', maker: 'china brewery', year: 2015 },
-  { name: 'kingscliff beer', maker: 'kingscliff brewery', year: 2014 }
+  { name: "Pale Ale, Quiet Deedsngry Man Pale Ale", maker: "Murray's Craft Brewing", year: 2016 },
+  { name: "Organic Pilsner", maker: "moses Handcrafted Beer", year: 2015 },
+  { name: "Welease Woger", maker: "Clare Valley Brewing Co", year: 2014 }
 ];
 
 Beers.insertMany(array, function(error, docs) {} );
@@ -27,20 +27,20 @@ app.get('/', function(req, res){
   });
 });
 
-// app.get('/create', function(req, res){
-//   var beer = new Beer(req.query);
-//   beer.save(function(err, beer){
-//     if(err) console.log(err);
-//     res.json(beers);
-//   });
-// });
+app.get('/create', function(req, res){
+  var beers = new Beers(req.query);
+  beers.save(function(err, beers){
+    if(err) console.log(err);
+    res.json(beers);
+  });
+});
 
-// app.get('/delete/:id',function(req, res){
-//   res.send(req.params);
-//   Beers.findoneAndRemove({'_id' : req.params.id}, function(err){
-//     if(err) console.log(err);
-//     res.send(err);
-//   });
-// });
+app.get('/delete/:id',function(req, res){
+  res.send(req.params);
+  Beers.findoneAndRemove({'_id' : req.params.id}, function(err){
+    if(err) console.log(err);
+    res.send(err);
+  });
+});
 
 app.listen(3000);
