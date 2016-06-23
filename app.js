@@ -44,3 +44,12 @@ app.get('/delete/:id',function(req, res){
 });
 
 app.listen(3000);
+
+
+// {
+//   "_id":
+//   "576b9225be7e97ec1ad7eb22"
+// },
+
+// localhost:3000/delete/576b9225be7e97ec1ad7eb22
+
